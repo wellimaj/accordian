@@ -12,19 +12,9 @@ export default function Accordian({content,Title}) {
           }}
         >
           <div>{Title}</div>
-          {!Open ? (
-            <img
-              className="arrow"
-              src="https://cdn0.iconfinder.com/data/icons/feather/96/591276-arrow-right-512.png"
-            ></img>
-          ) : (
-            <img
-              className="arrow"
-              src="https://cdn2.iconfinder.com/data/icons/lightly-icons/30/next-alt-240.png"
-            ></img>
-          )}
+          
         </div>
-        {Open ? <div className='content'>{content}</div> : <div></div>}
+        {Open ? <span className='content'>{content}</span> : <div></div>}
       </div>
     );
 }

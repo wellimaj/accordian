@@ -1,21 +1,21 @@
+.accordian{
+    display:block;
+}
 .content{
-    width: 100%;
-    height: auto;
+    width:fit-content;
+    height: 3rem;
     background-color: cadetblue;
     padding:20px;
     font-size: 1.5rem;;
 }
 
 .accordian-head {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+    display: inline-block;
+
+    width: 50%;
     height: 3rem;
     background-color: beige;
-    text-align: start;
-    align-items: center;
-    justify-content: space-between;
-    
+
 }
 .accordian-head div{
     margin:10px;
