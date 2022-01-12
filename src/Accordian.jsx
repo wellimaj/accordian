@@ -1,20 +1,18 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useState } from 'react'
 import './Accordian.css'
-export default function Accordian({content,Title}) {
+export default function Accordian({content,Title,dir}) {
     const [Open,setOpen]=useState(false)
     return (
-      <div className="accordian">
-        <div
-          className="accordian-head"
-          onClick={() => {
-            setOpen(!Open);
-          }}
-        >
-          <div>{Title}</div>
-          
-        </div>
-        {Open ? <span className='content'>{content}</span> : <div></div>}
+      <div
+        className={'accordian'+dir}
+        onClick={() => {
+          setOpen(!Open);
+        }}
+      >
+        <div className="title">{Title}</div>
+
+        {Open ? <span>{content}</span> : <div></div>}
       </div>
     );
 }
